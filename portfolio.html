@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <script src="portfolio.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #7CD8C9;
+            color: white;
+            font-family: "Karu Regular", sans-serif;
+        }
+        h1 {
+            font-family: "Karu Medium", sans-serif;
+            font-size: 7em;
+        }
+        h2 {
+            font-size: 3em;
+        }
+        h3 {
+            font-family: "Karu ExtraLight", sans-serif;
+            margin-bottom: 30px;
+        }
+        #header {
+            text-align: center;
+        }
+        #menu {
+            margin-top: 10px;
+            margin-bottom: 100px;
+            vertical-align: middle;
+        }
+        #logo {
+            padding: 3px;
+            margin-right: 40px;
+            border-radius: 5px;
+        }
+        #logo:hover {
+            background-color: #51BFAA;
+            transition: .5s ease;
+        }
+        .menu-item {
+            padding: 15px 10px;
+        }
+        a {
+            color:white;
+        }
+        a:hover {
+            transition: .5s ease;
+            text-decoration: none;
+            color: #51BFAA;
+        }
+        #views {
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            height: 100%;
+        }
+        #options {
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            right: 0px;
+            margin-left: 10px;
+        }
+        #detail-view-img {
+            width: 50%;
+            text-align: center;
+            display: inline-block;
+        }
+        #detail-view-info {
+            width: 50%;
+            text-align: center;
+            display: inline-block;
+        }
+        #list-view {
+            display: inline-block;
+            width: 100%;
+        }
+        .tile {
+            display: inline-block;
+            width:265px;
+            height:265px;
+            border-style: dashed;
+            border-width: 2px;
+            border-color: white;
+            border-radius: 5px;
+            margin: 10px;
+            position: relative;
+        }
+        .tile:hover {
+            transition: .5s ease;
+            background-color: #51BFAA;
+            width:275px;
+            height:275px;
+            margin:5px;
+        }
+        .tile-img {
+            max-width: 80%;
+            max-height: 80%;
+            display: table-cell;
+            margin:auto;
+            vertical-align: middle;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+            border-radius: 5px;
+        }
+        .tile-overlay {
+            width:100%;
+            height:100%;
+            background-color: #51BFAA;
+            z-index: 1000;
+            position: absolute;
+            display:none;
+            pointer-events: none;
+        }
+        .tile-text {
+            width:100%;
+            height:100%;
+            text-align: center;
+            z-index: 1010;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 90%;
+            height: 40%;
+            margin: auto;
+            display:none;
+            transition: .5s ease;
+            pointer-events: none;
+            vertical-align: middle;
+            text-transform: uppercase;
+            font-family: "Karu Medium", sans-serif;
+            letter-spacing: 3px;
+            font-size: 1.5em;
+            line-height: 100%;
+
+        }
+        .tile-helper {
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+        }
+        .tag {
+            opacity: 0.4;
+            display: inline-block;
+            padding: 2px 5px;
+            margin: 3px;
+            background-color: gray;
+            color: white;
+            font-size: 10px;
+            border-radius: 5px;
+        }
+        .tag:hover {
+            opacity: 1;
+            transition: .5s ease;
+        }
+        .date-tools {
+            font-weight: 300;
+            font-style: italic;
+            margin: 0px;
+            margin-bottom: 10px;
+        }
+        .desc {
+            margin: 0px;
+        }
+        .name {
+            text-transform: lowercase;
+        }
+        #detail-card {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            text-align: center;
+            display: none;
+        }
+        #img-holder {
+            display: inline-block;
+            width: 30%;
+            margin: 20px;
+        }
+        #content-holder {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: inline-block;
+            width: 60%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModal" aria-hidden="true" id="myModal">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="background-color: #7CD8C9">
+            <div class="row" style="margin:0px">
+              <div id="img-holder"></div>
+              <div id="content-holder"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row" id="menu">
+            <a href="index.html"><img src="res/logo-white.svg" height=60 id="logo" ></a>
+            <a href="about.html" class="menu-item">about</a>
+            <a href="resume.html" class="menu-item">resume</a>
+            <b style="color:white; padding: 15px 10px;">portfolio</b>
+        </div>
+
+        <div id="header" class="row">
+            <div class="col">
+                <h1>portfolio</h1>
+                <h3>select a work to view details. select a tag to filter.</h3>
+            </div>
+        </div>
+
+        <div id="options" class="row">
+            <div id="categories"></div>
+            <div id="tools"></div>
+        </div>
+
+        <div class="row">
+            <div id="list-view"></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

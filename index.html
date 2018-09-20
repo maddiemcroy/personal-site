@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #7CD8C9;
+            color: white;
+            font-family: "Karu Regular", sans-serif;
+            text-align: center;
+        }
+        #menu {
+            margin-top: 10px;
+            margin-bottom: 200px;
+            vertical-align: middle;
+        }
+        h1 {
+            font-family: "Karu Medium", sans-serif;
+            font-size: 6em;
+        }
+        h3 {
+            font-family: "Karu Light", sans-serif;
+            font-weight: 300;
+            margin-bottom: 30px;
+        }
+        #logo {
+            padding: 3px;
+            margin-right: 40px;
+            border-radius: 5px;
+        }
+        #logo:hover {
+            background-color: #51BFAA;
+            transition: .5s ease;
+        }
+        .menu-item {
+            padding: 15px 10px;
+        }
+        a {
+            color:white;
+        }
+        a:hover {
+            transition: .5s ease;
+            text-decoration: none;
+            color: #51BFAA;
+        }
+        img {
+            display: inline-block;
+        }
+        col {
+            vertical-align: middle;
+        }
+        .dec {
+            margin-top: -50px;
+            margin-bottom: -100px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#title").fadeIn(1200);
+            $("#sub").delay(800).fadeTo(1000, 1);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="menu">
+            <a href="index.html"><img src="res/logo-white.svg" height=60 id="logo" ></a>
+            <a href="about.html" class="menu-item">about</a>
+            <a href="resume.html" class="menu-item">resume</a>
+            <a href="portfolio.html" class="menu-item">portfolio</a>
+        </div>
+        <div class="row">
+            <div class="col">
+                <img src="res/text-dec-left.svg" style="float:left;" height=180 class="dec" /><br style="clear:both" />
+                <h1 style="z-index: 1" id="title">madison mcroy</h1>
+                <h3 style="z-index: 1" id="sub">designer & front-end developer</h3>
+                <img src="res/text-dec-right.svg" style="float:right;" height=180 class="dec" /><br style="clear:both" />
+            </div>
+        </div>
+    </div>
+</body>
+
+ </html>

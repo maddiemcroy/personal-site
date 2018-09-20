@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="fonts/fonts.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+      <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #7CD8C9;
+            color: white;
+            font-family: "Karu Regular", sans-serif;
+            text-align: center;
+        }
+        #menu {
+            margin-top: 10px;
+            margin-bottom: 100px;
+            vertical-align: middle;
+        }
+        h1 {
+            font-family: "Karu Medium", sans-serif;
+            font-size: 7em;
+        }
+        h3 {
+            font-family: "Karu ExtraLight", sans-serif;
+            margin-bottom: 30px;
+        }
+        #logo {
+            padding: 3px;
+            margin-right: 40px;
+            border-radius: 5px;
+        }
+        #logo:hover {
+            background-color: #51BFAA;
+            transition: .5s ease;
+        }
+        .menu-item {
+            padding: 15px 10px;
+        }
+        a {
+            color:white;
+        }
+        a:hover {
+            transition: .5s ease;
+            text-decoration: none;
+            color: #51BFAA;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#title").fadeIn(1200);
+            $("#sub").delay(800).fadeTo(1000, 1);
+            $("#text").delay(800).fadeTo(1000, 1);
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" id="menu">
+            <a href="index.html"><img src="res/logo-white.svg" height=60 id="logo" ></a>
+            <b style="color:white; padding: 15px 10px;">about</b>
+            <a href="resume.html" class="menu-item">resume</a>
+            <a href="portfolio.html" class="menu-item">portfolio</a>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <h1 id="title">about</h1>
+                <h3 id="sub">exploring the intersection of art & tech.</h3>
+                <p id="text">I'm Maddie, a third-year Computational Media student at Georgia Tech. I aim to utilize my design and technical skills together to explore the intersection of art and technology and create engaging interactive experiences that have real-world value and impact.</p>
+            </div>
+            <div class="col">
+                <img src="res/mi.png" style="width: 100%" />
+            </div>
+        </div>
+    </div>
+</body>
+
+ </html>
